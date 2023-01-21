@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <div>Home page</div>
-      <button onClick={()=>navigate('order-summary')}>Place Order</button>
+      <button onClick={()=>navigate('order-summary', {replace:true})}>Place Order</button>
     </>
   )
 }
