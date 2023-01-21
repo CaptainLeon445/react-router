@@ -9,6 +9,9 @@ import NotFound from "./components/NotFound";
 import Products from "./components/products";
 import FeaturedProducts from "./components/FeaturedProducts";
 import NewProducts from "./components/NewProducts";
+import Users from "./components/users";
+import Userdetails from "./components/Userdetails";
+import Admin from "./components/Admin";
 
 
 
@@ -25,6 +28,10 @@ function App() {
           <Route index element={<FeaturedProducts />}></Route>
           <Route path="featured" element={<FeaturedProducts />}></Route>
           <Route path="new" element={<NewProducts />}></Route>
+        </Route>
+        <Route path="users" element={<Users />}>
+          <Route path="admin" element={<Admin />}></Route>
+          <Route path=":userid" element={<Userdetails />}></Route>
         </Route>
         <Route path="*" element={<NotFound />}></Route>
 
